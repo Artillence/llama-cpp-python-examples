@@ -1897,9 +1897,11 @@ def functionary_v1_v2_chat_handler(
                 )
                 print(e)
             with suppress_stdout_stderr(disable=llama.verbose):
-                grammar = llama_grammar.LlamaGrammar.from_string(
-                    llama_grammar.JSON_GBNF, verbose=llama.verbose
-                )
+                # For some reason, using the llama_grammar.JSON_GBNF grammar makes the server hang.
+                # grammar = llama_grammar.LlamaGrammar.from_string(
+                #     llama_grammar.JSON_GBNF, verbose=llama.verbose
+                # )
+                grammar = None
 
         return grammar
 
