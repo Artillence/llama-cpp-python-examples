@@ -68,11 +68,12 @@ class ChatCompletionResponseFunctionCall(TypedDict):
     arguments: str
 
 
+
 class ChatCompletionResponseMessage(TypedDict):
     content: Optional[str]
-    tool_calls: NotRequired["ChatCompletionMessageToolCalls"]
+    tool_calls: NotRequired[Optional["ChatCompletionMessageToolCalls"]]
     role: Literal["assistant", "function"]  # NOTE: "function" may be incorrect here
-    function_call: NotRequired[ChatCompletionResponseFunctionCall]  # DEPRECATED
+    function_call: NotRequired[Optional[ChatCompletionResponseFunctionCall]]  # DEPRECATED
 
 
 class ChatCompletionFunction(TypedDict):
@@ -211,10 +212,10 @@ class ChatCompletionRequestAssistantMessageFunctionCall(TypedDict):
 class ChatCompletionRequestAssistantMessage(TypedDict):
     role: Literal["assistant"]
     content: Optional[str]
-    tool_calls: NotRequired[ChatCompletionMessageToolCalls]
-    function_call: NotRequired[
+    tool_calls: NotRequired[Optional[ChatCompletionMessageToolCalls]]
+    function_call: NotRequired[Optional[
         ChatCompletionRequestAssistantMessageFunctionCall
-    ]  # DEPRECATED
+    ]]  # DEPRECATED
 
 
 class ChatCompletionRequestToolMessage(TypedDict):
@@ -233,7 +234,6 @@ ChatCompletionRequestMessage = Union[
     ChatCompletionRequestSystemMessage,
     ChatCompletionRequestUserMessage,
     ChatCompletionRequestAssistantMessage,
-    ChatCompletionRequestUserMessage,
     ChatCompletionRequestToolMessage,
     ChatCompletionRequestFunctionMessage,
 ]
