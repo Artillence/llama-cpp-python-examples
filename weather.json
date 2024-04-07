@@ -1,0 +1,49 @@
+{
+  "location": {
+    "city": "Budapest",
+    "country": "Hungary",
+    "latitude": 47.4979,
+    "longitude": 19.0402
+  },
+  "current": {
+    "temperature": 15,
+    "weather_description": "Partly Cloudy",
+    "humidity": 60,
+    "wind_speed": 10,
+    "wind_direction": "NW",
+    "pressure": 1015,
+    "visibility": 10
+  },
+  "forecast": [
+    {
+      "date": "2024-04-07",
+      "temperature_min": 12,
+      "temperature_max": 18,
+      "weather_description": "Partly Cloudy",
+      "humidity": 55,
+      "wind_speed": 8,
+      "wind_direction": "NW",
+      "pressure": 1016
+    },
+    {
+      "date": "2024-04-08",
+      "temperature_min": 10,
+      "temperature_max": 16,
+      "weather_description": "Rain",
+      "humidity": 70,
+      "wind_speed": 12,
+      "wind_direction": "NE",
+      "pressure": 1014
+    },
+    {
+      "date": "2024-04-09",
+      "temperature_min": 8,
+      "temperature_max": 14,
+      "weather_description": "Cloudy",
+      "humidity": 65,
+      "wind_speed": 10,
+      "wind_direction": "N",
+      "pressure": 1013
+    }
+  ]
+}
