@@ -1835,7 +1835,9 @@ def functionary_v1_v2_chat_handler(
     prompt = prepare_messages_for_inference(
         messages, tokenizer, version, functions, tools
     )
-
+    
+    print(f"\n------------------------------PROMPT-------------------\n{prompt}\n----------------------------------\n")
+    
     # If no tools/functions are provided
     if function_call == "none" or functions is None or len(functions) == 0:
         if version == "v1":
